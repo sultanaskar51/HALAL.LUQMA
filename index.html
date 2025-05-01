@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HALAL LUQMA</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style/style.css">
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const catalogLink = document.querySelector('a[href="#catalog"]');
+      if (catalogLink) {
+        catalogLink.addEventListener('click', function(event) {
+          event.preventDefault();
+          document.querySelector('#catalog').scrollIntoView({ behavior: 'smooth' });
+        });
+      }
+    });
+  </script>
+</head>
+
+<body class="relative font-sans text-gray-800 bg-cover bg-center" style="background-image: url('images/wood-texture.jpg');">
+
+<!-- 🪢 Шапка -->
+<header class="relative text-white py-8 shadow-lg custom-header-bg">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center px-6 space-y-6 md:space-y-0">
+
+    <!-- Логотип + Название -->
+    <div class="flex items-center space-x-4">
+      <img src="images/logo.png" alt="Логотип Halal Luqma" class="h-32 w-32 rounded-full border-4 border-green-900 shadow-md">
+      <h1 class="text-3xl md:text-4xl font-extrabold tracking-wide animate-bounce">HALAL LUQMA</h1>
+    </div>
+
+ <!-- Новая Навигация -->
+ <nav class="flex flex-row flex-wrap justify-center space-x-2 space-y-0 sm:space-x-4 md:flex-col md:items-end md:space-y-2 md:space-x-0 text-sm font-medium">
+  <a href="komp.html" class="hover:text-yellow-300 transition">О компании</a>
+  <a href="#catalog" class="hover:text-yellow-300 transition">Каталог</a>
+  <a href="contacts.html" class="hover:text-yellow-300 transition">Контакты</a>
+</nav>
+
+  </div>
+</header>
+
+<!-- Каталог товаров -->
+<main id="catalog" class="max-w-6xl mx-auto p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+<!-- 🖼️ Плавающие изображения, добавлены классы для позиционирования -->
+<img id="for-img" class="floating-image" src="images/for.jpg" alt="for">
+<img id="kolb-img" class="floating-image" src="images/kolb.png" alt="kolb">
+<img id="gp-img" class="floating-image" src="images/gp.png" alt="gp">
+<img id="xal-img" class="floating-image" src="images/xalal2.png" alt="xal">
+<img id="em-img" class="floating-image" src="images/em.png" alt="em">
+<img id="fm-img" class="floating-image" src="images/fm.png" alt="fm">
+
+<!-- 🐴 Казы -->
+  <div class="card-wrapper border-4 border-green-900 text-white rounded-xl shadow p-3 relative z-10 bg-green-900">
+    <div class="image-wrapper p-2 rounded-lg">
+      <img src="images/kaz.jpg" alt="Казы Халяль" class="rounded-md mb-4 w-full h-55 object-cover">
+    </div>
+    <h2 class="text-xl font-semibold mb-2 text-black">Казы Халяль</h2>
+    <p class="text-white mb-4">Состав: нежнейшая конина, натуральный конский жир, соль и ароматные специи — всё, чтобы создать вкус по старинному рецепту.</p>
+    <a href="kaz.html" target="_blank">
+      <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Подробнее</button>
+    </a>
+  </div>
+
+<!-- 🥩 Рулет -->
+  <div class="card-wrapper border-4 border-green-900 text-white rounded-xl shadow p-3 relative z-10" style="background-color: rgba(5, 109, 43, 0.9);">
+    <div class="image-wrapper p-2 rounded-lg">
+      <img src="images/rulet.jpg" alt="Мясной рулет" class="rounded-md mb-4 w-full h-55 object-cover">
+    </div>
+    <h2 class="text-xl font-semibold mb-2 text-black">Рулет из конины</h2>
+    <p class="text-white mb-4">Состав: свежая конина, конский жир, соль и щедро подобранные специи — идеальное сочетание для любителей насыщенного вкуса.</p>
+    <a href="rulet.html" target="_blank">
+      <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Подробнее</button>
+    </a>
+  </div>
+
+<!-- 🌭 Краковская -->
+<div class="card-wrapper border-4 border-green-900 text-white rounded-xl shadow p-3 relative z-10" style="background-color: rgba(5, 109, 43, 0.9);">
+  <div class="image-wrapper p-2 rounded-lg">
+    <img src="images/krak (2).JPG" alt="Халяль колбаса" class="rounded-md mb-4 w-full h-55 object-cover">
+  </div>
+  <h2 class="text-xl font-semibold mb-2 text-black">Краковская колбаса</h2>
+  <p class="text-white mb-4">Состав: высший сорт говядины, говяжий жир, соль и уникальные специи — настоящее произведение колбасного искусства.</p>
+  <a href="krak.html" target="_blank">
+    <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Подробнее</button>
+  </a>
+</div>
+
+<!-- 👨‍🌾 Фермерская -->
+  <div class="card-wrapper border-4 border-green-900 text-white rounded-xl shadow p-3 relative z-10" style="background-color: rgba(5, 109, 43, 0.9);">
+    <div class="image-wrapper p-2 rounded-lg">
+      <img src="images/fermer.jpg" alt="Фермерская колбаса" class="rounded-md mb-4 w-full h-55 object-cover">
+    </div>
+    <h2 class="text-xl font-semibold mb-2 text-black">Колбаса фермерская</h2>
+    <p class="text-white mb-4">Состав: отборное мясо птицы, говяжий жир, соль и пикантные специи — всё, что нужно для домашнего угощения.</p>
+    <a href="fer.html" target="_blank">
+      <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Подробнее</button>
+    </a>
+  </div>
+
+<!-- 🍞 Мясной хлеб -->
+  <div class="card-wrapper border-4 border-green-900 text-white rounded-xl shadow p-3 relative z-10" style="background-color: rgba(5, 109, 43, 0.9);">
+    <div class="image-wrapper p-2 rounded-lg">
+      <img src="images/xleb.jpg" alt="Мясной хлеб" class="rounded-md mb-4 w-full h-55 object-cover">
+    </div>
+    <h2 class="text-xl font-semibold mb-2 text-black">Мясной Хлеб</h2>
+    <p class="text-white mb-4">Состав: нежное мясо птицы, говяжий жир, нитритная соль и специи — идеальное дополнение к любому столу.</p>
+    <a href="hleb.html" target="_blank">
+      <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Подробнее</button>
+    </a>
+  </div>
+
+<!-- 🏠 Домашняя -->
+  <div class="card-wrapper border-4 border-green-900 text-white rounded-xl shadow p-3 relative z-10" style="background-color: rgba(5, 109, 43, 0.9);">
+    <div class="image-wrapper p-2 rounded-lg">
+      <img src="images/dom.jpg" alt="Домашняя колбаса" class="rounded-md mb-4 w-full h-55 object-cover">
+    </div>
+    <h2 class="text-xl font-semibold mb-2 text-black">Домашняя колбаса</h2>
+    <p class="text-white mb-4">Состав: говядина, говяжий жир , ароматные специи — идеальное сочетание для ценителей традиционного вкуса.</p>
+    <a href="dom.html" target="_blank">
+      <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Подробнее</button>
+    </a>
+  </div>
+</main>
+
+<!-- Карта
