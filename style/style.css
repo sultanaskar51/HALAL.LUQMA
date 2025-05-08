@@ -227,29 +227,29 @@ footer a:hover {
     }
   }
 
-  /* 📱📱 Адаптивность: мобильные */
-  @media (max-width: 480px) {
-    nav {
-      flex-direction: row; /* ⬅ Горизонтально! */
-      justify-content: center; /* Центрируем */
-      flex-wrap: wrap; /* Если не влезает — переносим */
-      gap: 10px; /* Расстояние между кнопками */
-    }
+/* 📱📱 Адаптивность: мобильные */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: row; /* ⬅ Горизонтально! */
+    justify-content: center; /* Центрируем */
+    flex-wrap: wrap; /* Если не влезает — переносим */
+    gap: 10px; /* Расстояние между кнопками */
+  }
 
-    nav a {
-      font-size: 0.9rem;
-      padding: 8px 12px;
-    }
+  nav a {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
 
-    main {
-      grid-template-columns: 1fr;
-    }
+  main {
+    grid-template-columns: 1fr;
+  }
 
-    header h1 {
-      font-size: 3rem;
-    }
+  header h1 {
+    font-size: 3rem;
+  }
 
-    header p {
-      font-size: 1rem;
-    }
+  header p {
+    font-size: 1rem;
+  }
 }
