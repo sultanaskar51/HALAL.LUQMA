@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Краковская Колбаса</title>
+
+  <style>
+    /* === ОБЩИЙ ФОН САЙТА === */
+    body {
+      background-image: url('images/wood-texture.jpg'); /* Фон — текстура дерева */
+      background-size: cover;
+      background-position: center;
+      font-family: 'Arial', sans-serif;
+      color: #ffffff;
+      margin: 0;
+      padding: 0; 
+    }
+
+    /* === СТИЛИ ШАПКИ === */
+    header {
+      position: relative;
+      background-color: rgba(5, 109, 43, 0.8); /* Тёмно-зелёный фон */
+      padding: 20px;
+      text-align: center;
+      z-index: 10;
+    }
+
+    header h1 {
+      font-size: 4rem;
+      font-weight: bold;
+      color: #ffffff; /* Белый текст заголовка */
+      margin: 0;
+    }
+
+    /* === НАВИГАЦИЯ === */
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      list-style: none;
+      padding: 0;
+      margin: 20px 0 0 0;
+    }
+
+    nav a {
+      font-size: 1.5rem;
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: rgba(234, 255, 0, 0.8); /* Желтоватый при наведении */
+    }
+
+    /* === ОСНОВНОЙ КОНТЕНТ === */
+    main {
+      position: relative;
+      margin-top: 0;
+      padding-top: 0;
+      text-align: center;
+    }
+
+    /* === ПЛАВАЮЩЕЕ ИЗОБРАЖЕНИЕ ТАРА === */
+    #tar-img, #mas-img, #kro-img {
+      position: absolute;
+      width: 40%; /* Уменьшаем размер */
+      max-width: 500px;
+      height: auto;
+      top: 20px;
+      z-index: 1; /* Картинки позади карточки товара */
+    }
+
+    /* Установим их позиции */
+    #tar-img {
+      left: 0;
+    }
+    #mas-img {
+      right: 0;
+    }
+
+    .logo {
+      display: block;
+      margin: 0 auto 20px;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 4px solid #008000;
+      box-shadow: 0 0 15px #004d00;
+    }
+
+    /* === КАРТОЧКА ТОВАРА === */
+    .product-detail {
+      background-color: rgba(3, 48, 19, 0.8); /* Тёмно-зелёный фон */
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 800px;
+      margin: 20px auto; /* Центрируем карточку и добавляем отступ сверху */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: justify;
+      border: 3px solid rgba(5, 109, 43, 0.8); /* Рамка */
+      position: relative;
+      z-index: 2; /* Карточка сверху картинок */
+    }
+
+    /* === КАРТИНКИ ТОВАРА === */
+    .image-row {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .product-image {
+      width: 300px;
+      height: auto;
+      border-radius: 7px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      object-fit: cover;
+      border: 4px solid rgba(5, 109, 43, 0.8);
+      transition: transform 0.3s;
+    }
+
+    /* === ЭФФЕКТ ПРИ НАВЕДЕНИИ НА КАРТИНКУ === */
+    .product-image:hover {
+      transform: scale(1.05);
+    }
+
+    /* === СТИЛЬ ТЕКСТА В КАРТОЧКЕ === */
+    .product-detail p {
+      font-family: 'Georgia', serif;
+      font-size: 1.3rem;
+      line-height: 1.7;
+      color: #ffffff;
+    }
+
+    /* === ЖИРНЫЙ ВАЖНЫЙ ТЕКСТ === */
+    .product-detail p strong {
+      color: #3af09e; /* Мягкий бирюзовый цвет */
+    }
+
+    /* === КНОПКА "УЗНАТЬ ЦЕНУ" === */
+    .price-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #2d6a4f;
+      color: white;
+      font-size: 1.2rem;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 10px;
+      transition: background-color 0.3s;
+    }
+
+    .price-button:hover {
+      background-color: #1b5d37;
+    }
+
+    /* === ФУТЕР === */
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: rgba(5, 109, 43, 0.8);
+      color: white;
+      margin-top: 50px;
+    }
+
+    /* === АДАПТИВНОСТЬ ДЛЯ МОБИЛОК === */
+    @media (max-width: 600px) {
+      .image-row {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .product-detail {
+        padding: 15px;
+      }
+
+      /* Снимаем абсолютное позиционирование для картинок на мобильных */
+      #tar-img, #mas-img, #kro-img {
+        position: relative;
+        width: 80%;
+        max-width: 300px;
+        margin: 10px 0;
+      }
+
+      /* Убираем фоновое изображение */
+      #tar-img, #mas-img, #kro-img {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- === ШАПКА САЙТА === -->
+  <header>
+    <h1>Краковская колбаса</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="contacts.html">Контакты</a></li>  
+      </ul>
+    </nav>
+  </header>
+
+  <!-- === ОСНОВНОЙ КОНТЕНТ === -->
+  <main>
+    <!-- ПЛАВАЮЩЕЕ ИЗОБРАЖЕНИЕ -->
+    <img id="tar-img" class="floating-image" src="images/mas.png" alt="for">
+    <img id="mas-img" class="floating-image" src="images/ma.png" alt="for">
+    <img src="images/logo.PNG" alt="Логотип Halal Luqma" class="logo">
+
+    <!-- КАРТОЧКА ТОВАРА -->
+    <section class="product-detail">
+      <div class="image-row">
+        <img src="images/krak (2).Jpg" alt="Рулет из конины" class="product-image">
+        <img src="images/krak.jpg" alt="Рулет из конины" class="product-image">
+      </div>
+      <h2>Краковская колбаса</h2>
+      <p>Халяльная колбаса "Краковская" — это идеальный баланс вкуса и качества! Нежное мясо, натуральные специи и строгие халяльные стандарты — каждое изделие приносит в ваш дом чистоту и благословение. Сочно, ароматно и без компромиссов! Наслаждайтесь вкусом, приготовленным с уважением к традициям и с любовью.</p>
+      
+      <a href="https://t.me/Kguvfjdy" target="_blank" class="price-button">Узнать цену</a>
+    </section>
+  </main>
+
+  <!-- === ПОДВАЛ === -->
+  <footer>
+    <p>&copy; 2025 HALAL LUQMA</p>
+  </footer>
+</body>
+</html>
