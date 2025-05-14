@@ -72,20 +72,6 @@ main {
   pointer-events: none;
 }
 
-/* 🎯 Позиции для декора */
-#for-img { top: 100px; left: -330px; }
-#kolb-img { top: 400px; right: 1250px; }
-#gp-img { top: 450px; left: 115%; transform: translateX(-50%); }
-#xal-img { top: 80px; right: -290px; }
-#em-img { top: 900px; left: 115%; transform: translateX(-50%); }
-#fm-img { top: 500px; left: -9%; transform: translateX(-100%); }
-#tr-img { top: 1400px; left: -9%; transform: translateX(-100%); }
-#aso-img { top: 1400px; left: 125%; transform: translateX(-100%); }
-#kolbas-img { top: 1900px; left: 125%; transform: translateX(-100%); }
-#maso-img { top: 2200px; left: -10%; transform: translateX(-100%); }
-#ovoshi-img { top: 2700px; left: 125%; transform: translateX(-100%); }
-
-
 .logo {
   width: 100px;
   height: 100px;
